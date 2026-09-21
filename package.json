@@ -1,0 +1,22 @@
+{
+  "name": "betre-mussie-saving-loan",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Betre Mussie Basic Saving and Loan Organization Management System",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.10.0",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^2.0.0",
+    "pdfkit": "^0.17.1",
+    "bcryptjs": "^3.0.2"
+  },
+  "engines": {
+    "node": "22.x"
+  }
+}
