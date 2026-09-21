@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: betre-mussie
+    runtime: node
+    plan: starter
+    region: frankfurt
+    branch: main
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATA_DIR
+        value: /var/data/data
+      - key: UPLOAD_DIR
+        value: /var/data/uploads
+      - key: JWT_SECRET
+        generateValue: true
+    disk:
+      name: betre-mussie-data
+      mountPath: /var/data
+      sizeGB: 10
